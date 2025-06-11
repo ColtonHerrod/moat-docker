@@ -12,6 +12,7 @@ jobs:
       DOCKER_ORG: teacup
       DOCKER_LATEST: nightly
       RUNNER_TOOL_CACHE: /toolcache
+      MOAT_VERSION: v1.1.0
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -44,5 +45,6 @@ jobs:
             linux/arm64                        
           push: true
           tags: | # replace it with your local IP and tags
-            coltonh476/${{ steps.meta.outputs.REPO_NAME }}:${{ steps.meta.outputs.REPO_VERSION }}
+            coltonh476/${{ steps.meta.outputs.REPO_NAME }}:${MOAT_VERSION}
             coltonh476/${{ steps.meta.outputs.REPO_NAME }}:${{ env.DOCKER_LATEST }}
+          build-args: MOAT_VERSION=${{ env.MOAT_VERSION }}
