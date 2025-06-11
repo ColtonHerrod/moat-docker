@@ -10,7 +10,7 @@ jobs:
       image: catthehacker/ubuntu:act-latest
     env:
       DOCKER_ORG: teacup
-      DOCKER_LATEST: nightly
+      DOCKER_LATEST: latest
       RUNNER_TOOL_CACHE: /toolcache
       MOAT_VERSION: v1.1.0
     steps:
