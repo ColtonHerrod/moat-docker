@@ -45,6 +45,6 @@ jobs:
             linux/arm64                        
           push: true
           tags: | # replace it with your local IP and tags
-            coltonh476/${{ steps.meta.outputs.REPO_NAME }}:${MOAT_VERSION}
+            coltonh476/${{ steps.meta.outputs.REPO_NAME }}:${{ env.MOAT_VERSION }}
             coltonh476/${{ steps.meta.outputs.REPO_NAME }}:${{ env.DOCKER_LATEST }}
           build-args: MOAT_VERSION=${{ env.MOAT_VERSION }}
