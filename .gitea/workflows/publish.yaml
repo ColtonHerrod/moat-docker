@@ -44,5 +44,5 @@ jobs:
             linux/arm64                        
           push: true
           tags: | # replace it with your local IP and tags
-            ${{ steps.meta.outputs.REPO_NAME }}:${{ steps.meta.outputs.REPO_VERSION }}
-            ${{ steps.meta.outputs.REPO_NAME }}:${{ env.DOCKER_LATEST }}
+            coltonh476/${{ steps.meta.outputs.REPO_NAME }}:${{ steps.meta.outputs.REPO_VERSION }}
+            coltonh476/${{ steps.meta.outputs.REPO_NAME }}:${{ env.DOCKER_LATEST }}
